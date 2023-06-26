@@ -2,39 +2,251 @@
 <html lang="es">
 
 <head>
+    <!--Metadatos-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo-->
     <title>Salud mental y emocional</title>
+    <!--Añadir archivo CSS-->
     <link rel="stylesheet" href="css/style.css">
+    <!--Añadir fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!--Añadir Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Iconos de Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-toggler">
-                <a class="navbar-brand" href="index.html"><img src="img/logo_salud_metal.png" width="150"
-                        alt="Logo de salud mental y emocional"></a>
-                <ul class="navbar-nav d-flex justify-content-center align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+    <!--Barra de navegacion-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-toggler">
+                    <a class="navbar-brand" href="index.html"><img src="img/logo_salud_mental.png" width="150"
+                            alt="Logo de salud mental y emocional"></a>
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--POPUPS-->
+    <div class="notificacion">
+        <p>Bienvenido, es un placer poder servirle</p>
+        <span class="notificacion_progreso"></span>
+    </div>
+
+    <!--Seccion informacion-->
+    <section class="servicio seccion-clara">
+        <div class="container text-center">
+            <div class="row">
+                <!--Directorio medico-->
+                <div class="columna col-12 col-md-4">
+                    <i class="bi bi-hospital"></i>
+                    <p class="servicio-titulo">DIRECTORIO MEDICO</p>
+                    <p class="descripcion">Demos juntos el primer paso.</p>
+                    <a href="servicios.html">
+                        <button type="button" class="btn btn-info">Ver todo el directorio medico </button>
+                    </a>
+                </div>
+                <!--ABC salud mental-->
+                <div class="columna col-12 col-md-4">
+                    <i class="bi bi-capsule"></i>
+                    <p class="servicio-titulo">ABC SALUD MENTAL</p>
+                    <p class="descripcion">Todo lo que querias saber sobre salud mental.</p>
+                    <a href="index.html">
+                        <button type="button" class="btn btn-info">Ver todo sobre salud mental </button>
+                    </a>
+                </div>
+                <!--pedir una cita-->
+                <div class="columna col-12 col-md-4">
+                    <i class="bi bi-calendar-date"></i>
+                    <p class="servicio-titulo">PEDIR UNA CITA</p>
+                    <p class="descripcion">Agenda tu cita y o controles en pocos pasos.</p>
+                    <a href="contacto.html">
+                        <button type="button" class="btn btn-info">Agendar una cita </button>
+                    </a>
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
+
+    <!--Seccion servicios-->
+    <section>
+        <h2 class="titulos_secciones">Nuestros servicios</h2>
+        <div class="card-group">
+            <div class="card">
+                <img src="./img/consulta24.jpg" class="card-img-top" alt="Jefe ejecutivo">
+                <div class="card-body">
+                    <h5 class="card-title">CONSULTA PRIORITARIA 24 HORAS</h5>
+                    <p class="card-text">Atención inmediata a pacientes vulnerables y con crisis emocional.</p>
+                    <p class="card-text"><small class="text-body-secondary">ÚLTIMA ACTUALIZACION HACE 3 MESES</small>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/hospitalizacion.jpg" class="card-img-top" alt="doctora">
+                <div class="card-body">
+                    <h5 class="card-title">HOSPITALIZACION</h5>
+                    <p class="card-text">Un tiempo acertado para cuidar y estabilizar tu realidad.</p>
+                    <p class="card-text"><small class="text-body-secondary">ÚLTIMA ACTUALIZACION HACE 3 MESES</small>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/consulta.jpg" class="card-img-top" alt="psicologa">
+                <div class="card-body">
+                    <h5 class="card-title">CONSULTA EXTERNA Y SERVICIOS AMBULATORIOS</h5>
+                    <p class="card-text">¡Que la VIDA SIGA! Seguimiento y control
+                        especializado de tu tratamiento.</p>
+                    <p class="card-text"><small class="text-body-secondary">ÚLTIMA ACTUALIZACION HACE 3 MESES</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-group">
+            <div class="card">
+                <img src="./img/hospitalizacion1.jpg" class="card-img-top" alt="psicologo">
+                <div class="card-body">
+                    <h5 class="card-title">HOSPITALIZACION DÌA</h5>
+                    <p class="card-text">Transforma tu dolor en oportunidades valiosas para la vida.</p>
+                    <p class="card-text"><small class="text-body-secondary">ÚLTIMA ACTUALIZACION HACE 3 MESES</small>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/adicciones.jpg" class="card-img-top" alt="terapeuta">
+                <div class="card-body">
+                    <h5 class="card-title">ATENCION EN ADICCIONES</h5>
+                    <p class="card-text">Asistencia primaria y terapéutica para canalizar comportamientos.</p>
+                    <p class="card-text"><small class="text-body-secondary">ÚLTIMA ACTUALIZACION HACE 3 MESES</small>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/infantil.jpg" class="card-img-top" alt="terapeuta">
+                <div class="card-body">
+                    <h5 class="card-title">UNIDAD INFANTIL (NIÑOS Y ADOLESCENTES)</h5>
+                    <p class="card-text">Nos interesa el desarrollo personal e intelectual en la primera infancia.</p>
+                    <p class="card-text"><small class="text-body-secondary">ÚLTIMA ACTUALIZACION HACE 3 MESES</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Seccion profesionales-->
+    <h2 class="titulos_secciones">Nuestros profesionales</h2>
+
+    <figure class="carta">
+        <img src="./img/Ceo.jpg" alt="Jefe corporativo" class="carta_imagen">
+        <figcaption class="carta_cuerpo">
+            <div>
+                <h2 class="carta_categoria">ERICK JAMES</h2>
+                <p class="card_autor">CEO</p>
+            </div>
+            <a href="#" class="carta_boton">Ver resumen</a>
+        </figcaption>
+    </figure>
+
+    <figure class="carta">
+        <img src="./img/doctora.jpg" alt="doctora" class="carta_imagen">
+        <figcaption class="carta_cuerpo">
+            <div>
+                <h2 class="carta_categoria">CLAUDIA ROSE</h2>
+                <p class="card_autor">DOCTORA</p>
+            </div>
+            <a href="#" class="carta_boton">Ver resumen</a>
+        </figcaption>
+    </figure>
+
+    <figure class="carta">
+        <img src="./img/terapeuta.jpg" alt="terapeuta" class="carta_imagen">
+        <figcaption class="carta_cuerpo">
+            <div>
+                <h2 class="carta_categoria">LINA MARIA ALVAREZ</h2>
+                <p class="card_autor">TERAPEUTA</p>
+            </div>
+            <a href="#" class="carta_boton">Ver resumen</a>
+        </figcaption>
+    </figure>
+
+    <figure class="carta">
+        <img src="./img/psicologa.jpg" alt="psicologa" class="carta_imagen">
+        <figcaption class="carta_cuerpo">
+            <div>
+                <h2 class="carta_categoria">MARIA RUIZ </h2>
+                <p class="card_autor">PSICOLOGA</p>
+            </div>
+            <a href="#" class="carta_boton">Ver resumen</a>
+        </figcaption>
+    </figure>
+
+    <figure class="carta">
+        <img src="./img/psicologo.jpg" alt="psicologo" class="carta_imagen">
+        <figcaption class="carta_cuerpo">
+            <div>
+                <h2 class="carta_categoria">ROBERT GONZALEZ</h2>
+                <p class="card_autor">PSICOLOGO</p>
+            </div>
+            <a href="#" class="carta_boton">Ver resumen</a>
+        </figcaption>
+    </figure>
+
+
+    <figure class="carta">
+        <img src="./img/terapeuta1.jpg" alt="terapeuta" class="carta_imagen">
+        <figcaption class="carta_cuerpo">
+            <div>
+                <h2 class="carta_categoria">LORENA GOMEZ</h2>
+                <p class="card_autor">TERAPEUTA</p>
+            </div>
+            <a href="#" class="carta_boton">Ver resumen</a>
+        </figcaption>
+    </figure>
+
+    <!-- Pie de pagina (footer)-->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <img class="footer-logo " src="./img/logo_salud_mental.png" alt="Logo">
+        <p class="footer-texto text-center"> Somos una ayuda especializada y personalizada para cada uno de ustedes que
+            estan atravezando por un momento oscuro en sus vidad.</p>
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-snapchat"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+        <div class="derechos-de-autor">Todos los derechos reservados Salud mental y emocional &#169; Desarrollado Por
+            AlejoMunoz (2023) </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"

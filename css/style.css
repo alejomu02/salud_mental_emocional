@@ -5,7 +5,7 @@
     background-color: aliceblue;
 }
 
-.navbar-nav .nav-item:hover{
+nav a:hover{
     font-weight: bold;
     text-decoration: underline;
 }
@@ -13,14 +13,14 @@
 
 .navbar-collapse{
     align-items: center;
-    justify-content:space-between;
+    justify-content:space-around;
 }
 
 /*Seccion salud mental*/
 .informacion, .subTitulo, .lista, .fotos {
-    position: relative;
+    position:relative;
     z-index: 1;
-    margin: 20px 15%;
+    margin: 15px 15%;
 }
 
 
@@ -36,16 +36,306 @@ section{
     background-image: url(../img/fondo_salud_mental.jpg);
 }
 
-.text{ position: relative;}
+.boton{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+}
 
-.text::before{
-    content: "";
-    display: block;
+/*Notificacion*/
+.notificacion{
     position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: max-content;
+    padding: 20px 15px;
+    border-radius: 5px;
+    background-color: #141619;
+    color: #f6f5f9;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+    transform:translateY(30px);
+    opacity: 0;
+    visibility: hidden;
+    animation: fade-in 4s linear forwards;
+}
+
+.notificacion_progreso{
+    position:absolute;
+    left: 5px;
+    bottom: 5px;
+    width: calc(100% - 10px);
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-image: linear-gradient(to right, #539bdb, #3250bf);
+    border-radius: inherit;
+    animation: load 3s 0.25s linear forwards;
+}
+
+
+@keyframes fade-in{
+    5%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    90%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes load{
+    to{
+        transform: scaleX(1);
+    }
+}
+
+/* Servicios*/
+.servicio{
+    padding: 40px 40px 60px 40px;
+}
+
+
+.servicio .columna {
+    padding: 20px;
+    border: 2px solid #8080804d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; 
+    transition: all 0.2s ease-in;
+}
+.servicio .columna:hover{
+    color: white;
+    background-color: #1b1b32;
+}
+
+.servicio i{ 
+    font-size: 2.5rem;
+    color: #0ee8ec;
+    background-color: #0a0a23;
+    padding: 8px 19px;
+    border-radius: 50%;
+}
+
+.servicio-titulo{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.descripcion{
+    font-size: 18px;
+}
+
+.btn-info {
+    font-size: 1.1rem;
+    margin: 20px;
+    font-weight: bold;
+}
+
+.titulos_secciones{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 40px;
+    text-decoration:underline;
+    margin: 0 0 50px;
+}
+
+/* profesionales*/
+.carta{
+    position:relative;
+    isolation: isolate;
+    width: 50%;
+    height: 225;
+    background-color: #000;
+    border-radius: 8px;
+    margin: 0 0 15% 20%
+}
+
+.carta_imagen{
+    display:block;
     width: 100%;
     height: 100%;
-    background: #fff;
+    object-fit: cover;
+    object-position: 0 20%;
+    border-radius: inherit;
+    transition: transform 250ms;
 }
+
+.carta:hover .carta_imagen{
+    transform: translateY(-112px) scale(0.75);
+}
+
+.carta_cuerpo{
+    position:absolute;
+    inset: 0;
+    z-index: -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 24px;
+    color: #0ee8ec;
+}
+
+.carta_categoria{
+    color: #fff;
+}
+
+.carta_boton{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background-color:#0ee8ec;
+    color: #000;
+}
+
+/* Formulario */
+.contenedor_formulario{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin-top: 90px;
+}
+
+.contenedor_formulario h2{
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+
+.contenedor_formulario p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contenedor_formulario a{
+    font-size: 17px;
+    display: inline-block;
+    text-align: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+.contenedor_formulario a i{
+    color: #0ee8ec;
+    margin-right: 10px;
+}
+
+.contenedor_formulario form .campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 15px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+
+.contenedor_formulario form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+
+.contenedor_formulario .btn_enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: #0ee8ec;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.contenedor_formulario .btn_enviar:hover{
+    background: #000;
+}
+
+
+/* mapa*/
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#fff, #a3f4f6, #53e8eb, #0ee8ec, #07baec, #0763ec,#1b1b50,#1b1b32);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-contenido{
+    width: 940px;
+    margin: 0 auto;
+}
+
+
+/* Pie de pagina (footer)*/
+footer{
+    min-height: 400px;
+}
+
+.seccion-oscura{
+    color: white;
+    background-color: #1b1b32;
+}
+
+.footer-logo{
+    height: 140px;
+    width: 140px;
+    margin: 10px;
+}
+
+.footer.texto{
+    font-size: 1.5rem;
+    padding: 20px;
+    margin-bottom: 30px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.iconos-redes-sociales a{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    margin: 10px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i{
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover{
+    background-color: white;
+    border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i{
+    color: black;
+}
+
+.derechos-de-autor{
+    font-size: 15px;
+    color: #aeaeae;
+    padding: 20px;
+}
+
 
 
 /* Adaptable (Responsivo)*/
@@ -54,3 +344,25 @@ section{
     display:none;
     }    
 }
+
+
+@media screen and (max-width: 700px){
+    .fotos{
+        max-width:  350px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .informacion .lista .subTitulo{
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:700px){
+    .carta{
+        min-width: 100%;
+        margin: auto;
+    } 
+}
+
+

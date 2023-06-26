@@ -2,43 +2,122 @@
 <html lang="es">
 
 <head>
+    <!--Metadatos-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Titulo-->
     <title>Salud mental y emocional</title>
+    <!--Añadir archivo CSS-->
     <link rel="stylesheet" href="css/style.css">
+    <!--Añadir fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!--Añadir Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <!--Iconos de Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-toggler">
-                <a class="navbar-brand" href="index.html"><img src="img/logo_salud_metal.png" width="150"
-                        alt="Logo de salud mental y emocional"></a>
-                <ul class="navbar-nav d-flex justify-content-center align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="servicios.html">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
+    <!--Barra de navegacion-->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-toggler">
+                    <a class="navbar-brand" href="index.html"><img src="img/logo_salud_mental.png" width="150"
+                            alt="Logo de salud mental y emocional"></a>
+                    <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servicios.html">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
+        </nav>
+    </header>
+
+    <!--POPUPS-->
+    <div class="notificacion">
+        <p>Bienvenido, es un placer poder servirle</p>
+        <span class="notificacion_progreso"></span>
+    </div>
+
+    <!--Formulario-->
+
+    <div class="contenedor_formulario">
+        <div class="info_formulario">
+            <h2>Contactanos</h2>
+            <p>Estamos aquí para brindarte el apoyo y la atención necesaria para cuidar de tu bienestar emocional.
+                Nuestro equipo altamente capacitado te ofrece un ambiente seguro y confidencial, utilizando técnicas
+                basadas en la evidencia para ayudarte a superar tus desafíos emocionales. Contáctanos hoy mismo y
+                déjanos ayudarte en tu camino hacia una vida más saludable y equilibrada.</p>
+            <a href="#"> <i class="bi bi-telephone-plus-fill"></i>123-456-789</a>
+            <a href="#"> <i class="bi bi-envelope-at-fill"></i>email@tudomio.com</a>
+            <a href="#"> <i class="bi bi-house-check-fill"></i>Ciudad, Pais</a>
         </div>
-    </nav>
+        <form action="#" autocomplete="off">
+            <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo" required>
+
+            <input type="email" name="correo" placeholder="Ingresa tu correo" class="campo" required>
+
+            <textarea name="mensaje" placeholder="Ingresa un mensaje"></textarea>
+
+            <input type="submit" name="enviar" value="enviar mensaje" class="btn_enviar">
+
+        </form>
+    </div>
+
+    <section class="mapa">
+        <h3 class="titulos_secciones">Nuestra ubicacion</h3>
+        <p>Nuestro centro medico se encuentra en el corazon de la ciudad, aqui podras encontrar un ambiente tranquilo y rodeado de mucha naturaleza</p>
+
+        <div class="mapa-contenido">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6244433085058!2d-75.60856782633233!3d6.180994527051464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e46823b07fa76e7%3A0xd858c9c2ddf4b118!2sSENA%20Complejo%20Sur%20Itag%C3%BC%C3%AD!5e0!3m2!1ses!2sco!4v1687794392346!5m2!1ses!2sco" width="900" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <!-- Pie de pagina (footer)-->
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+        <img class="footer-logo " src="./img/logo_salud_mental.png" alt="Logo">
+        <p class="footer-texto text-center"> Somos una ayuda especializada y personalizada para cada uno de ustedes que
+            estan atravezando por un momento oscuro en sus vidad.</p>
+        <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-snapchat"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="bi bi-envelope"></i>
+            </a>
+        </div>
+        <div class="derechos-de-autor">Todos los derechos reservados Salud mental y emocional &#169; Desarrollado Por
+            AlejoMunoz (2023) </div>
+    </footer>
+
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
